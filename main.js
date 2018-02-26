@@ -5,7 +5,7 @@ var app = require('express')(),
     fs = require('fs');
 
 // Loading the page index.html
-app.get('herokuapp.com', function (req, res) {
+app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
 
