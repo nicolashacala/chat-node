@@ -1,5 +1,5 @@
 var app = require('express')(),
-    server = require('http').createServer(app),
+    server = require('https').createServer(app),
     io = require('socket.io').listen(server),
     ent = require('ent'), // Blocks HTML characters (security equivalent to htmlentities in PHP)
     fs = require('fs');
