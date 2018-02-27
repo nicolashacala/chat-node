@@ -1,7 +1,7 @@
 const PORT = process.env.PORT || 8080;
 
 var app = require('express')(),
-    server = require('https').createServer(app),
+    server = require('http').createServer(app),
     io = require('socket.io').listen(server),
     ent = require('ent'), // Blocks HTML characters (security equivalent to htmlentities in PHP)
     fs = require('fs');
