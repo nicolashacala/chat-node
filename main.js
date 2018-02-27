@@ -1,14 +1,15 @@
 const PORT = process.env.PORT || 8080;
 
-var app = require('express')(),
-    server = require('http').createServer(app),
+var express = require('express'),
+    app = express(),
+    server = app.listen(PORT),
     io = require('socket.io').listen(server),
     ent = require('ent'), // Blocks HTML characters (security equivalent to htmlentities in PHP)
     fs = require('fs');
 
 // Loading the page index.html
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 io.sockets.on('connection', function (socket, username) {

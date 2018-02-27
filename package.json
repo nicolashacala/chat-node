@@ -7,7 +7,8 @@
     "dependencies": {
         "express": "~4.16.2",
         "socket.io": "~2.0.4",
-        "ent": "~2.2.0"
+        "ent": "~2.2.0",
+        "cors": "~2.8.4"
     },
     "author": "Kobal",
     "description": "A real-time super chat with socket .io"
