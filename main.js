@@ -6,6 +6,15 @@ var app = require('express')(),
     ent = require('ent'), // Blocks HTML characters (security equivalent to htmlentities in PHP)
     fs = require('fs');
 
+var jq = require("jsdom").env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+
+    var $ = require("jquery")(window);
+});
+
 // Loading the page index.html
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
