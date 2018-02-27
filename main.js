@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 8080;
+
 var app = require('express')(),
     server = require('https').createServer(app),
     io = require('socket.io').listen(server),
@@ -24,4 +26,4 @@ io.sockets.on('connection', function (socket, username) {
     }); 
 });
 
-server.listen(8080);
+server.listen(PORT);
