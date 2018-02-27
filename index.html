@@ -30,7 +30,7 @@
         <script>
 
             // Connecting to socket.io
-            var socket = io.connect('http://localhost:8080');
+            var socket = io.connect(window.location.hostname);
 
             // The username is requested, sent to the server and displayed in the title
             var username = prompt('What\'s your username?');
